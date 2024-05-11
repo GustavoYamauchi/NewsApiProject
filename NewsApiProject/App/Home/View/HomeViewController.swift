@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     private lazy var label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         self.view.addSubview(label)
-        
+        HeadlineViewModel().fetchBrands()
         NSLayoutConstraint.activate([
             label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             label.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
